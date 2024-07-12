@@ -1,0 +1,28 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+// @import "react-datepicker/dist/react-datepicker.css";
+@import "flatpickr/dist/themes/light";
+
+@import "./config/variables";
+@import "./config/mixins";
+
+@import "./layouts/header";
+@import "./layouts/footer";
+@import "./layouts/loading";
+@import "./components/button";
+
+@import "./pages/sign-in";
+@import "./pages/book-appointment-details";
+@import "./pages/book-appointment";
+@import "./pages/contact-us";
+@import "./pages/faq";
+@import "./pages/our-team";
+@import "./pages/packages";
+@import "./pages/buy-package";
+@import "./pages/page-not-found";
+@import "./pages/services";
+@import "./pages/sitemap";
+@import "./pages/terms-conditions";
+@import "./pages/thank-you";
+@import "./pages/banners";
+
+@import "./common";

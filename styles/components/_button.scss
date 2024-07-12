@@ -1,0 +1,52 @@
+.themeBtn{
+    font-family: $ff_two;
+    font-size: 13px;
+    padding: 10.5px 25px;
+    position: relative;
+    text-transform: uppercase;
+    background-color: $primaryColor;
+    color: $white-color;
+    border-radius: 0;
+    border: none;
+    font-weight: 600;
+    letter-spacing: 0.75px;
+    @media(max-width:1024px){
+        padding: 8px 15px;
+    }
+    @media(max-width:576px){
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+    @media(max-width:479px){
+        font-size: 10px;
+    }
+    &:hover,&:focus,&.active,&:active{
+        background-color: $secondaryColor!important;
+        color: $white-color!important;
+        border-color: transparent!important;
+    }
+    + .themeBtn{
+        margin-left: 10px;
+    }
+}
+.btn-text {
+    font-weight: 600;
+    color: #000000;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: inline-block;
+    i{
+        font-size: 13px;
+        margin-left: 5px;
+        transition: 0.3s ease-in-out all;
+      -webkit-transition: 0.3s ease-in-out all;
+      -mos-transition: 0.3s ease-in-out all;
+      -ms-transition: 0.3s ease-in-out all;
+    }
+    &:hover{
+        i{
+            margin-left: 15px;
+        }
+    }
+}

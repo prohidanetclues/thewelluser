@@ -1,0 +1,136 @@
+.bannerSection{
+    .swiper{
+        height: calc(100vh - 100px);
+        position: relative;
+        @media(max-width:1024px){
+            height: calc(100vh - 150px) !important;
+        }
+        @media(max-width:767px){
+            height: calc(100vh - 50px) !important;
+        }
+        .swiper-wrapper{
+            .swiper-slide{
+                .item{
+                    .single-banner-slide{
+                        height: 100vh;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        width: 100%;
+                        height: 100vh;
+                        background-position: top;
+                        position: relative;
+                        .homeSliderCaption{
+                            content: '';
+                            position: absolute;
+                            bottom: 25%;
+                            left: 5%;
+                            max-width: 550px;
+                            line-height: 125%;
+                            letter-spacing: 0.5px;
+                            padding: 0 0 50px 0;
+                            z-index: 99;
+                            @media(max-width:767px){
+                                padding: 0;
+                            }
+                            @media(max-width:576px){
+                                bottom: 30%;
+                            }
+                            .bannerTitle{
+                                text-transform: uppercase;
+                                font-size: 32px;
+                                margin-bottom: 25px;
+                                padding-bottom: 25px;
+                                position: relative;
+                                color: $black-color;
+                                font-weight: 500;
+                                @media(max-width:767px){
+                                    font-size: 24px;
+                                    margin-bottom: 15px;
+                                    padding-bottom: 15px;
+                                }
+                                @media(max-width:576px){
+                                    font-size: 20px;
+                                    margin-bottom: 10px;
+                                    padding-bottom: 10px;
+                                }
+                                &:before {
+                                    content: '';
+                                    position: absolute;
+                                    height: 1px;
+                                    width: 100px;
+                                    background-color: $black-color;
+                                    left: 0;
+                                    bottom: 0;
+                                }
+                            }
+                            .bannerContent {
+                                font-size: 20px;
+                                line-height: 130%;
+                                margin: 10px 0 40px;
+                                color: $black-color;
+                                letter-spacing: 1px;
+                                font-weight: normal;
+                                @media(max-width:767px){
+                                    font-size: 16px;
+                                    margin: 10px 0 15px;
+                                }
+                                @media(max-width:576px){
+                                    font-size: 12px;
+                                }
+                            }
+                            .bannerBtndiv{
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .swiper-pagination{
+            position: absolute;
+            bottom: 65px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            z-index: 15;
+            max-width: 1600px;
+            list-style: none;
+            z-index: 99999999;
+            display: flex;
+            justify-content: end;
+            @media(max-width:1600px){
+                left: -100px;
+                right: auto;
+            }
+            @media(max-width:1440px){
+                bottom: 60px;
+            }
+            @media(max-width:768px){
+                left: 0;
+                right: 0;
+                justify-content: center;
+                bottom: 20px;
+            }
+            .swiper-pagination-bullet {
+                display: inline-block;
+                vertical-align: middle;
+                width: 20px;
+                height: 5px;
+                margin: 3px;
+                text-indent: -999px;
+                cursor: pointer;
+                background-color: rgba($black-color,40%);
+                border-radius: 10px;
+                transition: 0.3s ease-in-out all;
+                -webkit-transition: 0.3s ease-in-out all;
+                -mos-transition: 0.3s ease-in-out all;
+                -ms-transition: 0.3s ease-in-out all;
+                &.swiper-pagination-bullet-active{
+                    width: 35px;
+                    height: 5px !important;
+                    background-color: $black-color;
+                }
+            }
+        }
+    }
+}

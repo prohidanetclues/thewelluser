@@ -1,0 +1,103 @@
+.thank-you {
+  &.sectionPadding{
+    @media (max-width: 1024px) {
+      padding: 40px 0 0px 0;
+    }
+  }
+  .thank-you-wrap {
+    .thank-you-text-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 50px 0 40px 0;
+      @media (max-width: 1599px) {
+        padding: 30px 0 30px 0;
+      }
+      @media (max-width: 1366px) {
+        padding: 20px 0 20px 0;
+      }
+      @media (max-width: 1299px) {
+        padding: 0px 0 0px 0;
+      }
+      @media (max-width: 991px) {
+        min-height: 380px;
+      }
+      @media (max-width: 767px) {
+        min-height: 300px;
+      }
+      @media (max-width: 576px) {
+        min-height: 200px;
+      }
+      .thank-you-title {
+        font-weight: 700;
+        font-size: 92px;
+        line-height: 100%;
+        letter-spacing: -0.02em;
+        // color: $text-color;
+        margin: 0 0 30px 0;
+        background: -webkit-linear-gradient(#eee, #333);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        @media (max-width: 1440px) {
+          font-size: 62px;
+        }
+        @media (max-width: 767px) {
+          font-size: 52px;
+          margin: 0px 0 15px 0;
+        }
+      }
+      .thanks-image {
+        max-width: 400px;
+        width: 100%;
+        margin: 0 auto 30px auto;
+        @media (max-width: 1440px) {
+          max-width: 300px;
+        }
+        @media (max-width: 991px) {
+          max-width: 250px;
+        }
+        @media (max-width: 576px) {
+          margin: 0 auto 10px auto;
+          max-width: 200px;
+        }
+      }
+      .thanks-title {
+        font-weight: 700;
+        font-size: 36px;
+        letter-spacing: -0.02em;
+        color: $text-color;
+        padding-bottom: 10px;
+        @media (max-width: 991px) {
+          font-size: 24px;
+          padding-bottom: 5px;
+          margin-bottom: 5px;
+        }
+        @media (max-width: 576px) {
+          font-size: 18px;
+          padding-bottom: 0px;
+        }
+      }
+      p {
+        color: $text-color;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        max-width: 50%;
+        margin: 0 auto 25px auto;
+        @media (max-width: 767px) {
+          max-width: 80%;
+          font-size: 14px;
+          margin: 0 auto 20px auto;
+        }
+        @media (max-width: 576px) {
+          font-size: 14px;
+          margin-bottom: 20px;
+        }
+        @media (max-width: 479px) {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

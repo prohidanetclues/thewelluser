@@ -1,0 +1,692 @@
+@font-face {
+  font-family: "gothambold";
+  src: "/public/assets/fonts/gotham-bold-webfont.woff2" format("woff2"),
+    "/public/assets/fonts/gotham-bold-webfont.woff" format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "gothambook";
+  src: "/public/assets/fonts/gotham-book-webfont.woff2" format("woff2"),
+    "/public/assets/fonts/gotham-book-webfont.woff" format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "gothamlight";
+  src: "/public/assets/fonts/gotham-light-webfont.woff2" format("woff2"),
+    "/public/assets/fonts/gotham-light-webfont.woff" format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "gothammedium";
+  src: "/public/assets/fonts/gotham-medium-webfont.woff2" format("woff2"),
+    "/public/assets/fonts/gotham-medium-webfont.woff" format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media (min-width: 1401px) {
+  .container {
+    max-width: 1430px;
+  }
+}
+@media (max-width: 1400px) {
+  .container {
+    max-width: 1300px;
+  }
+}
+@media (max-width: 1280px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+.cms {
+  padding: 50px 0;
+}
+@media (max-width: 991px) {
+  .cms {
+    padding: 25px 0;
+  }
+}
+
+body {
+  font-family: $ff_one;
+  color: $text-color;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $ff_one;
+}
+a {
+  text-decoration: none;
+  color: $primaryColor;
+  outline: none;
+  @include transition_03s;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    color: inherit;
+  }
+}
+p {
+  font-size: 16px;
+  line-height: 1.65;
+  @media (max-width: 1366px) {
+    font-size: 15px;
+  }
+  @media (max-width: 1024px) {
+    font-size: 14px;
+  }
+}
+
+.thumbnail_container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  margin-bottom: 0;
+  overflow: hidden;
+  border-radius: 0;
+  .thumbnail {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    padding: 0;
+    border: none;
+    background: 0 0;
+    img {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      transition: all 0.8s ease 0s;
+      -webkit-transition: all 0.8s ease 0s;
+    }
+  }
+}
+img {
+  max-width: 100%;
+}
+li {
+  list-style: none;
+}
+
+* {
+  // scrollbar-width: thin;
+  // scrollbar-color: $text-color transparent;
+  // -webkit-scrollbar-width: thin;
+  // -webkit-scrollbar-color: $text-color transparent;
+}
+*::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+body::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $primaryColor;
+  border-radius: 20px;
+  border: 2px solid transparent;
+}
+
+.scroll-x::-webkit-scrollbar,
+.scroll-y::-webkit-scrollbar,
+.table-responsive::-webkit-scrollbar {
+  width: 4px;
+}
+.scroll-x::-webkit-scrollbar-thumb,
+.scroll-y::-webkit-scrollbar-thumb,
+.table-responsive::-webkit-scrollbar-thumb {
+  border: 0px solid $primaryColor;
+  background-color: $primaryColor;
+}
+
+// Pagination Start
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px auto;
+  padding: 0;
+  li {
+    display: inline-block;
+    margin: 0 5px;
+    &.active {
+      a {
+        background-color: $primaryDarkColor;
+        color: #ffffff;
+      }
+    }
+    a {
+      color: $primaryDarkColor;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 32px;
+      width: 32px;
+      border-radius: 50%;
+      background-color: #f8f8f8;
+      border: 1px solid #e8e8e8;
+      font-size: 14px;
+    }
+  }
+}
+
+// Pagination End
+
+// Owl carousel Dots
+.owl-dots {
+  .owl-dot {
+    span {
+      height: 10px;
+      width: 10px;
+      display: inline-block;
+      border-radius: 50px;
+      background-color: rgba(255, 255, 255, 0.25);
+      @include transition_05s;
+    }
+    + .owl-dot {
+      margin-left: 8px;
+    }
+    &.active {
+      span {
+        width: 25px;
+        background-color: rgba(255, 255, 255, 0.85);
+      }
+    }
+  }
+}
+
+// General Class
+.image-radius {
+  @include image-radius;
+  overflow: hidden;
+}
+.shadow-3D {
+  @include shadow-3D;
+}
+
+.titleBorder {
+  position: relative;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  text-transform: uppercase;
+  &:before {
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 100px;
+    background-color: #000000;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+  }
+}
+.form-control {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.15s,
+    -webkit-box-shadow ease-in-out 0.15s;
+  -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+.form-control:focus {
+  box-shadow: none;
+  border-color: inherit;
+}
+label {
+  font-weight: 600;
+}
+.filterSection .filterDropdown {
+  max-width: 250px;
+}
+.filterSection label {
+  font-size: 15px;
+  margin: 0 5px 0 0;
+}
+
+// new design common css s 05-07-2024
+.common-paragraph {
+  font-size: 17px;
+  line-height: 160%;
+  color: $black-color-light;
+  font-weight: normal;
+  text-align: justify;
+  letter-spacing: 0.7px;
+  font-family: "gothambook", sans-serif;
+  margin: 0 0 10px 0;
+  &.cms-p {
+    font-size: 19px;
+    @media (max-width: 1024px) {
+      font-size: 17px;
+    }
+    @media (max-width: 767px) {
+      font-size: 15px;
+    }
+    @media (max-width: 576px) {
+      font-size: 13px;
+    }
+  }
+  @media (max-width: 1024px) {
+    font-size: 15px;
+  }
+  @media (max-width: 767px) {
+    font-size: 14px;
+  }
+  @media (max-width: 576px) {
+    font-size: 13px;
+  }
+}
+.sectionPadding {
+  padding: 55px 0;
+  @media (max-width: 1024px) {
+    padding: 40px 0;
+  }
+  @media (max-width: 767px) {
+    padding: 30px 0;
+  }
+}
+.whiteBg {
+  background-color: $white-color;
+}
+.secondaryBg {
+  background-color: $bgColor;
+}
+.primaryBg {
+  background-color: $primaryColor;
+}
+
+.sectionTitle {
+  position: relative;
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+  // text-transform: uppercase;
+  font-weight: 400;
+  line-height: 120%;
+  // color: #5a3d33;
+  color: $text-color;
+  font-size: 32px;
+  @media (max-width: 1024px) {
+    font-size: 26px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+  @media (max-width: 767px) {
+    font-size: 24px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+  }
+  @media (max-width: 576px) {
+    font-size: 22px;
+  }
+  &:before {
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 100px;
+    background-color: $black-color;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+  }
+}
+.sectionInnerTitle {
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 120%;
+  color: $white-color;
+  font-size: 32px;
+  margin: 0;
+  padding: 0;
+  @media (max-width: 1024px) {
+    font-size: 26px;
+  }
+  @media (max-width: 767px) {
+    font-size: 24px;
+  }
+  @media (max-width: 576px) {
+    font-size: 22px;
+  }
+}
+.sectionContentTitle {
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 120%;
+  color: $text-color;
+  font-size: 28px;
+  margin-bottom: 20px;
+  @media (max-width: 1024px) {
+    font-size: 22px;
+  }
+  @media (max-width: 767px) {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  @media (max-width: 576px) {
+    font-size: 20px;
+  }
+  @media (max-width: 479px) {
+    font-size: 18px;
+  }
+}
+.common-sectionBg-image {
+  // background-size: cover;
+  // background-position: center;
+  // background-repeat: no-repeat;
+  max-width: 100%;
+  width: 100%;
+  vertical-align: middle;
+  height: 100%;
+  aspect-ratio: 9 / 6;
+  @media (max-width: 1199px) {
+    aspect-ratio: 9 / 8;
+  }
+  @media (max-width: 1024px) {
+    aspect-ratio: 9/9;
+  }
+  @media (max-width: 767px) {
+    aspect-ratio: 9 / 6;
+  }
+}
+.ContentBtnGroup {
+  .themeBtn {
+    @media (max-width: 767px) {
+      width: 200px;
+    }
+    + .themeBtn {
+      margin-left: 20px;
+      @media (max-width: 767px) {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+.countLabel {
+  font-size: 24px;
+  font-weight: 700;
+  display: block;
+  line-height: 120%;
+  text-align: center;
+}
+.mw-lg-75 {
+  max-width: 75%;
+  @media (max-width: 1024px) {
+    max-width: 85%;
+  }
+}
+.before-right-auto {
+  &::before {
+    right: auto;
+    @media (max-width: 767px) {
+      right: 0;
+    }
+  }
+}
+.mw-60 {
+  max-width: 60%;
+  @media (max-width: 1599px) {
+    max-width: 75%;
+  }
+  @media (max-width: 991px) {
+    max-width: 100%;
+    padding: 0 30px;
+  }
+  @media (max-width: 767px) {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+}
+.p-30 {
+  padding: 30px 0;
+}
+.textWhite {
+  color: $white-color;
+}
+.textBlack {
+  color: $black-color;
+}
+.image-div {
+  img {
+    @media (max-width: 767px) {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      object-position: center;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+}
+.text-truncate-02 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.text-truncate-03 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.danger-btn {
+  background-color: $danger-color;
+  color: $white-color;
+  &:hover,
+  &:focus,
+  &.active {
+    background-color: rgba($danger-color, 0.5) !important;
+    color: $white-color !important;
+  }
+}
+// new design common css e 05-07-2024
+// CMS Page CSS S
+.cms {
+  .sectionTitle{
+    @media (max-width: 576px) {
+      font-size: 22px;
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+    }
+  }
+  a{
+    font-size: 16px;
+    font-weight: 600;
+    color: $primaryColor;
+    &:hover{
+      color: $text-color;
+    }
+  }
+  ol,
+  ul {
+    margin: 0 0 0 20px;
+    padding: 0;
+    margin-left: 0;
+    position: relative;
+    left: 20px;
+    width: calc(100% - 20px);
+    li {
+      font-size: 18px;
+      font-weight: 400;
+      font-style: normal;
+      color: $text-color;
+      line-height: 150%;
+      @media (max-width: 991px) {
+        font-size: 16px;
+      }
+      + li {
+        margin-top: 10px;
+      }
+    }
+  }
+  ol {
+    list-style-type: decimal;
+    margin: 0 0 0 25px;
+    left: auto;
+    width: auto;
+    margin-left: 28px;
+    li {
+      position: relative;
+      list-style-type: auto;
+    }
+  }
+  ul {
+    li {
+      list-style-type: disc;
+    }
+  }
+  img {
+    max-width: 100%;
+    vertical-align: middle;
+  }
+  p {
+    font-size: 16px;
+    line-height: 160%;
+    color: rgba(0, 0, 0, 0.6509803922);
+    font-weight: normal;
+    text-align: justify;
+    letter-spacing: 0.7px;
+    margin: 0 0 15px 0;
+    @media (max-width: 991px) {
+      font-size: 16px;
+    }
+  }
+  + h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-top: 20px;
+    }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 500;
+    font-style: normal;
+    color: $text-color;
+    line-height: 120%;
+    letter-spacing: 0.25px;
+    word-spacing: 0;
+    text-transform: inherit;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  h1 {
+    font-size: 36px;
+    @media (max-width: 991px) {
+      font-size: 28px;
+    }
+  }
+  h2 {
+    font-size: 32px;
+    @media (max-width: 991px) {
+      font-size: 24px;
+    }
+  }
+  h3 {
+    font-size: 28px;
+    @media (max-width: 991px) {
+      font-size: 21px;
+    }
+  }
+  h4 {
+    font-size: 24px;
+    @media (max-width: 991px) {
+      font-size: 20px;
+    }
+  }
+  h5 {
+    font-size: 22px;
+    @media (max-width: 991px) {
+      font-size: 20px;
+    }
+  }
+  h6 {
+    font-size: 20px;
+    @media (max-width: 991px) {
+      font-size: 18px;
+    }
+  }
+  table {
+    border: 1px solid $whiteLighShade;
+    margin: 20px 0;
+    thead{
+      tr{
+        td{
+          font-weight: 600;
+          color: $text-color;
+          font-size: 16px;
+          background: $whiteLighShade;
+          padding: 10px;
+          border: 1px solid $whiteLighShade;
+          @media (max-width: 576px) {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    tr {
+      td {
+        border: 1px solid $whiteLighShade;
+        padding: 12px;
+        color: $lightGrey;
+        font-size: 16px;
+        letter-spacing: 0.5px;
+        text-align: center;
+      }
+      &:nth-child(2n) {
+        td {
+          background-color: transparent;
+        }
+      }
+      padding: 0 10px;
+      @media (max-width: 576px) {
+        font-size: 12px;
+      }
+      &:first-child {
+        padding-left: 10px;
+      }
+    }
+  }
+}
+// CMS Page CSS E

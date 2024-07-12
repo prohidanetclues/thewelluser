@@ -1,0 +1,216 @@
+// .ourValuesRow {
+// 	display: flex;
+// 	background-color: $bgColor;
+// }
+// .ourValues {
+// 	.ourValuesTitle {
+// 		text-transform: uppercase;
+// 		color: #ffffff;
+// 		background-color: $primaryColor;
+// 		padding: 25px 0;
+// 		text-align: center;
+// 		font-size: 32px;
+// 	}
+// }
+// .ourValuesBox {
+// 	text-align: center;
+// 	padding: 50px 0;
+// 	.boxSubTitle {
+// 		font-size: 24px;
+// 		font-weight: 800;
+// 		font-family: $ff_one;
+// 	}
+// 	.boxTitle {
+// 		font-size: 28px;
+// 		line-height: 125%;
+// 		text-transform: uppercase;
+// 		margin: 25px 0 35px;
+// 	}
+// 	p {
+// 		font-size: 18px;
+// 		line-height: 1.65;
+// 		max-width: 60%;
+// 		margin: 0 auto;
+// 	}
+// }
+// .colorBox {
+// 	background-color: $primaryColor;
+// 	.ourValuesBox {
+// 		.boxSubTitle {
+// 			color: #ffffff;
+// 		}
+// 		.boxTitle {
+// 			color: #ffffff;
+// 		}
+// 		p {
+// 			color: #ffffff;
+// 		}
+// 	}
+// }
+// .ourNarrative {
+// 	p {
+// 		max-width: 85%;
+// 		margin: 0 auto;
+// 		text-align: justify;
+// 	}
+// }
+// .meetOurTeam {
+// 	background-color: $bgColor;
+// 	padding: 50px 0;
+// 	position: relative;
+// 	overflow: hidden;
+// 	&:before {
+// 		position: absolute;
+// 		content: "";
+// 		width: 100%;
+// 		height: 100%;
+// 		background-image: url(../../public/assets/images/logo/w-logo.png);
+// 		background-position: top right;
+// 		background-repeat: no-repeat;
+// 		top: 50px;
+// 		right: -30px;
+// 		opacity: 0.5;
+// 	}
+// }
+// .meetOurTeamRow {
+// 	display: flex;
+// }
+// .meetOurTeamContentMain {
+// 	height: 100%;
+// 	display: flex;
+// 	align-items: end;
+// 	padding-bottom: 50px;
+// 	p {
+// 		font-size: 20px;
+// 		margin-bottom: 35px;
+// 	}
+// }
+// .meetOurTeamTitle.titleBorder {
+// 	&:before {
+// 		right: auto;
+// 	}
+// }
+// .meetOurTeamContent {
+// 	.meetOurTeamBtns {
+// 		display: flex;
+// 		align-items: center;
+// 		justify-content: space-between;
+// 	}
+// }
+// @media (max-width:1440px) {
+// 	.ourValuesBox {
+// 		p {
+// 			max-width: 75%;
+// 		}
+// 	}
+// }
+// @media (max-width:1366px) {
+// 	.ourValuesBox {
+// 		.boxTitle {
+// 			font-size: 20px;
+// 		}
+// 		p {
+// 			font-size: 15px;
+// 		}
+// 	}
+// }
+// @media (max-width:1024px) {
+// 	.ourValuesBox {
+// 		p {
+// 			max-width: 100%;
+// 			padding: 0 20px;
+// 		}
+// 	}
+// 	.meetOurTeam {
+// 		&:before {
+// 			width: 200px;
+// 			height: 200px;
+// 			background-size: cover;
+// 		}
+// 	}
+// 	.meetOurTeamContentMain {
+// 		p {
+// 			font-size: 16px;
+// 		}
+// 	}
+// }
+// @media (max-width:991px) {
+// 	.ourValuesRow {
+// 		flex-direction: column;
+// 	}
+// 	.ourValuesBox {
+// 		.boxTitle {
+// 			br {
+// 				display: none;
+// 			}
+// 			margin: 15px 0 25px;
+// 		}
+// 		p {
+// 			max-width: 85%;
+// 			padding: 0;
+// 			text-align: justify;
+// 		}
+// 	}
+// 	.meetOurTeam {
+// 		&:before {
+// 			width: 125px;
+// 			height: 125px;
+// 			background-size: cover;
+// 			top: 20px;
+// 			right: -20px;
+// 		}
+// 		.btn {
+// 			padding: 10px;
+// 			font-size: 12px;
+// 		}
+// 	}
+// 	.ourNarrative {
+// 		p {
+// 			margin-bottom: 25px;
+// 		}
+// 	}
+// 	.meetOurTeamContentMain {
+// 		padding-bottom: 25px;
+// 	}
+// }
+// @media (max-width:767px) {
+// 	.meetOurTeamContent {
+// 		.meetOurTeamBtns {
+// 			flex-direction: column;
+// 		}
+// 		text-align: center;
+// 	}
+// 	.meetOurTeam {
+// 		.btn {
+// 			min-width: 200px;
+// 		}
+// 	}
+// 	.meetOurTeamRow {
+// 		flex-direction: column;
+// 	}
+// 	.meetOurTeamTitle.titleBorder {
+// 		&:before {
+// 			right: 0;
+// 		}
+// 	}
+// 	.meetOurTeamImg {
+// 		max-width: 200px;
+// 		margin: 0 auto 25px;
+// 		display: flex;
+// 		align-items: center;
+// 		position: relative;
+// 	}
+// 	.ourValuesBox {
+// 		p {
+// 			padding: 0 15px;
+// 			max-width: 100%;
+// 			font-size: 14px;
+// 		}
+// 	}
+// 	.ourNarrative {
+// 		p {
+// 			max-width: 100%;
+// 			font-size: 14px;
+// 		}
+// 	}
+// }

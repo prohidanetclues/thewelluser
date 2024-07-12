@@ -1,0 +1,318 @@
+.header {
+  position: relative;
+  top: 0;
+  width: 100%;
+  padding: 10px 5%;
+  z-index: 99;
+  background-color: $bgColor;
+  @include transition_05s;
+  text-transform: uppercase;
+  box-shadow: rgba(33, 35, 38, 0.1) 0 10px 10px -10px;
+  @media (max-width: 1366px) {
+    padding: 15px 2%;
+  }
+  @media (max-width: 767px) {
+    padding: 10px 2%;
+  }
+  .mobile-menu {
+    display: none;
+    @media (max-width: 1199px) {
+      // position: absolute;
+      // top: 30px;
+      // right: 150px;
+      // padding: 8.5px 12px;
+      // display: block;
+      padding: 10.5px 12px;
+      display: block;
+      margin: 0 13px 0 0;
+    }
+    @media (max-width: 1024px) {
+      // top: 25px;
+      padding: 8px 15px;
+    }
+    @media (max-width: 991px) {
+      // top: 20px;
+    }
+    @media (max-width: 767px) {
+      // top: 11px;
+    }
+    @media (max-width: 576px) {
+      padding: 5.7px 10px;
+      margin-left: 10px;
+    }
+    @media (max-width: 479px) {
+      // padding: 10.2px 12px;
+      // right: 135px;
+    }
+
+    .navbar-toggler-icon {
+      display: inline-block;
+      width: 1.5em;
+      height: 1.5em;
+      vertical-align: middle;
+      background-image: url(../../public/assets/images/common/three-lines.png) !important;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 130%;
+      @media (max-width: 1199px) {
+        background-image: url(../../public/assets/images/common/three-lines.png);
+      }
+    }
+  }
+  .themeBtn {
+    &.canvas-login-btn {
+      padding: 8.2px 15px;
+      display: none;
+      @media (max-width: 1199px) {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        padding: 8px 12px;
+        display: block;
+      }
+      @media (max-width: 991px) {
+        top: 20px;
+      }
+      @media (max-width: 767px) {
+        top: 11px;
+      }
+      .login-icon {
+        font-size: 18px;
+      }
+    }
+    + .themeBtn {
+      margin-left: 10px;
+    }
+  }
+  .top-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    .sign-up-menu-btn-group{
+      position: relative;
+    }
+    .header-login-dropdown {
+      .dropdown-toggle {
+        background-color: transparent;
+        border-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media (max-width: 1199px) {
+          padding: 0;
+        }
+        &::after {
+          color: #333333;
+        }
+        .user-name {
+          font-size: 14px;
+          color: #333333;
+          font-weight: 500;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0 10px 0 0;
+        }
+        .count {
+          display: inline-flex;
+          height: 30px;
+          width: 30px;
+          border-radius: 100%;
+          background-color: #333333;
+          font-size: 12px;
+          color: #ffffff;
+          justify-content: center;
+          align-items: center;
+          font-weight: 500;
+        }
+      }
+      .dropdown-menu {
+        border-radius: 0;
+        border: none;
+        box-shadow: 0 12px 12px rgba(0, 0, 0, 0.176);
+        left: auto;
+        right: 0;
+        @media (max-width: 1199px) {
+          position: absolute;
+        }
+        .dropdown-item {
+          margin: 0;
+          color: $text-color;
+          font-size: 12px;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+          font-weight: 500;
+          padding: 5px 10px;
+          &.active,
+          &:active,
+          &:hover,
+          &:focus {
+            background-color: #eaeaea;
+            color: $primaryDarkColor;
+          }
+        }
+      }
+    }
+    &.navbar {
+      .navbar-toggler {
+        display: none;
+      }
+      .navbar-brand {
+        display: inline-block;
+        max-width: 215px;
+        padding: 0;
+        @media (max-width: 767px) {
+          max-width: 100px;
+          width: 100px;
+        }
+        .logoContainer {
+          max-width: 215px;
+          width: 100%;
+          @media (max-width: 768px) {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+    .navbar-content {
+      @media (max-width: 1024px) {
+        display: none;
+      }
+      .navbar-nav {
+        .nav-item {
+          display: inline-block;
+          position: relative;
+          padding: 0 15px;
+          .nav-link {
+            margin: 0;
+            color: var(--text-color);
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 5px 0;
+          }
+          &.active,
+          &:hover,
+          &:focus {
+            color: $primaryDarkColor;
+          }
+          &.dropdown {
+            .dropdown-menu {
+              border-radius: 0;
+              border: none;
+              box-shadow: 0 12px 12px rgba(0, 0, 0, 0.176);
+              .dropdown-item {
+                a {
+                  font-size: 14px;
+                  text-transform: uppercase;
+                }
+                .nav-item {
+                  padding: 0px;
+                  a {
+                    font-size: 14px;
+                    text-transform: uppercase;
+                  }
+                  .dropdown-toggle {
+                    &.nav-link {
+                      &.active,
+                      &:hover,
+                      &:focus {
+                        color: $text-color;
+                      }
+                    }
+                  }
+                  .dropdown-menu {
+                    @media (min-width: 1025px) {
+                      left: 130px;
+                      top: 0;
+                    }
+                  }
+                }
+                &:focus,
+                &:hover,
+                &.active {
+                  color: #212529;
+                  background-color: #f8f9fa;
+                }
+              }
+            }
+          }
+        }
+        margin: 0 80px 0 0;
+      }
+      .navabr-btn-group {
+        &.navbar-nav {
+          margin: 0 0 0 0;
+        }
+        
+        .themeBtn {
+          &.login-btn {
+            padding: 7.9px 12px;
+            @media (max-width: 1024px) {
+              padding: 8.1px 12px;
+            }
+            .login-icon {
+              font-size: 22px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.offcanvas {
+  .offcanvas-header {
+    .offcanvas-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+  .offcanvas-body {
+    .mobile-menu-list-wrap {
+      .mobile-nav {
+        .nav-item {
+          margin: 0 0 5px 0;
+          .nav-link {
+            padding-left: 0;
+            margin: 0;
+            color: var(--text-color);
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            width: 100%;
+            position: relative;
+            &::after {
+              position: absolute;
+              right: 0;
+              top: 15px;
+            }
+          }
+          &.dropdown {
+            .dropdown-menu.show {
+              width: 100%;
+              transform: translate3d(15px, 40px, 0px) !important;
+              border-radius: 0;
+              border: none;
+              box-shadow: 0 12px 12px rgba(0, 0, 0, 0.176);
+            }
+          }
+        }
+      }
+      .navabr-btn-group {
+        flex-direction: column;
+        align-items: flex-start !important;
+        margin: 30px 0 0 0;
+        .themeBtn {
+          width: 100%;
+          + .themeBtn {
+            margin: 10px 0 0px 0;
+          }
+        }
+      }
+    }
+  }
+}

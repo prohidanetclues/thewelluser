@@ -1,0 +1,132 @@
+.faq{
+	.sectionTitle{
+		margin-bottom: 35px;
+		padding-bottom: 10px;
+		@media (max-width: 767px) {
+			margin-bottom: 25px;
+		}
+		@media (max-width: 576px) {
+			font-size: 20px;
+			margin-bottom: 15px;
+		}
+		&::before{
+			height: 2px;
+			width: 45px;
+			right: auto;
+		}
+		&.before-right-auto{
+			&::before{
+				@media (max-width: 767px) {
+					right: auto;
+				}
+			}
+		}
+	}
+	.faqs-title{
+		margin: 0;
+	    padding: 15px 20px 15px 55px;
+	    font-size: 18px;
+	    position: relative;
+		&::before{
+			content: '';
+			width: 30px;
+			height: 1px;
+			background: #3c4a52;
+			position: absolute;
+			bottom: 12px;
+		}
+	    @media(max-width: 767px){
+	    	font-size: 16px;
+	    }
+		@media(max-width: 576px){
+			font-size: 14px;
+		}
+	    .question {
+		    background: #3c4a52 none repeat scroll 0 0;
+		    color: #ffffff;
+		    display: inline-block;
+		    height: 100%;
+		    left: 0px;
+		    line-height: 55px;
+		    margin-right: 10px;
+		    position: absolute;
+		    text-align: center;
+		    top: 0px;
+		    width: 40px;
+			@media(max-width: 576px){
+				line-height: 49px;
+			}
+		}
+	}
+	.accordion-header{
+		background-color: #f8f8f8;
+		.accordion-button {
+			padding: 0 20px 0 0;
+			&:not(.collapsed) {
+				outline: none;
+				border-color: transparent;
+				box-shadow: none;
+				background-color: transparent;
+				color: inherit;
+
+			}
+		}
+		.accordion-button {
+			&:hover{
+				color: inherit;
+			}
+			&:focus {
+				outline: none;
+				border-color: transparent;
+				box-shadow: none;
+				background-color: transparent;
+			}
+			&::after {
+				// width: 11px;
+				// height: 11px;
+				// border-radius: 100%;
+				// background-color: $primaryDarkColor;
+				
+			}
+		}
+		.accordion-button.collapsed {
+			&::after {
+				// background-color: var(--bs-gray-300);
+			}
+		}
+	}
+	.accordion-body{
+		position: relative;
+		padding-left: 55px;
+		.ans {
+		    background: #dddddd;
+		    border-radius: 100%;
+		    color: #000000;
+		    display: inline-block;
+		    font-weight: 600;
+		    height: 30px;
+		    left: 8px;
+		    line-height: 30px;
+		    position: absolute;
+		    text-align: center;
+		    top: 18px;
+		    width: 30px;
+		}
+		p{
+			font-size: 16px;
+			line-height: 160%;
+			color: rgba(0, 0, 0, 0.6509803922);
+			font-weight: normal;
+			text-align: justify;
+			letter-spacing: 0.7px;
+			margin: 0;
+			@media(max-width: 767px){
+				font-size: 14px;
+			}
+			@media(max-width: 576px){
+				font-size: 12px;
+			}
+		}
+	}
+}
+

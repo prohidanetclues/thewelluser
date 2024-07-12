@@ -1,0 +1,145 @@
+.book-appointment{
+	.book-appointment-title{
+		margin: 0;
+	    padding: 15px 20px 22px 55px;
+	    font-size: 20px;
+	    position: relative;
+	    @media(max-width: 767px){
+	    	font-size: 18px;
+	    }
+	    .question {
+		    background: #3c4a52 none repeat scroll 0 0;
+		    color: #ffffff;
+		    display: inline-block;
+		    height: 100%;
+		    left: 0px;
+		    line-height: 55px;
+		    margin-right: 10px;
+		    position: absolute;
+		    text-align: center;
+		    top: 0px;
+		    width: 40px;
+		}
+	}
+	.appointment-inner{
+		.tabbing-wrapper{
+			@media (max-width: 576px) {
+				flex-direction: column;
+			}
+		}
+		.nav{
+			&.tab-items{
+				flex: 1 0 auto;
+				@media (max-width: 576px) {
+					display: inline-block;
+    				text-align: center;
+					margin: 0 0 20px 0;
+				}
+				.nav-link{
+					font-family: gothammedium, sans-serif;
+					font-size: 13px;
+					padding: 10px 20px;
+					position: relative;
+					text-transform: uppercase;
+					background-color: #979a8f;
+					color: #fff;
+					margin: 0 0 10px 0;
+					border-radius: 0;
+					text-align: left;
+					@media (max-width: 576px) {
+						display: inline-block;
+						width: auto;
+						font-size: 12px;
+					}
+					&:hover, &.active{
+						background-color: #c9c9c9;
+    					color: initial;
+					}
+				}
+				.availability-link{
+					width: 210px;
+					display: block;
+					text-align: center;
+					margin: 10px 0 0 0;
+					font-size: 14px;
+					font-weight: 600;
+					text-decoration: underline;
+					@media (max-width: 991px) {
+						width: 100%;
+					}
+					// span{
+					// 	font-size: 12px;
+					// 	color: #000;
+					// 	font-weight: 500;
+					// }
+				}
+			}
+		}
+		.tab-content{
+			flex: 1 1 100%;
+			.tab-content-title{
+				font-family: gothammedium, sans-serif;
+				text-transform: uppercase;
+				font-size: 16px;
+				color: #333;
+				font-weight: 500;
+				letter-spacing: 1px;
+				display: flex;
+				width: 83%;
+				justify-content: center;
+				align-items: center;
+			}
+			.tab-pane{
+				.items-list{
+					box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+					margin: 0 0 30px 0;
+    				height: calc(100% - 30px);
+					.item-image{
+						margin: 0 0 10px 0;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						background-color: #f2f2f2;
+						img{
+							max-width: 100%;
+							aspect-ratio: 6 / 8;
+							object-fit: cover;
+							object-position: center;
+						}
+					}
+					.item-details{
+						padding: 0 10px 10px 10px;
+						.item-name{
+							font-family: gothammedium, sans-serif;
+							text-transform: capitalize;
+							font-size: 16px;
+							color: #333;
+							font-weight: 500;
+							letter-spacing: 0.5px;
+							margin: 0 0 5px 0;
+							transition: .3s ease-in-out all;
+							-webkit-transition: .3s ease-in-out all;
+							text-transform: capitalize;
+							text-align: center;
+							&:hover{
+								color: #979a8f;
+								cursor: pointer;
+							}
+						}
+						.item-type{
+							display: block;
+							font-size: 14px;
+							font-weight: 300;
+							color: #616161;
+							line-height: 25px;
+							font-family: gothambook, sans-serif;
+							text-transform: capitalize;
+							text-align: center;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+

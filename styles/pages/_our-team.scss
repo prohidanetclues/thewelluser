@@ -1,0 +1,127 @@
+.ourTeamPage {
+  .tab-listing {
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 30px 40px;
+      background-color: $primaryColor;
+      @media (max-width: 1366px) {
+        padding: 20px 20px;
+      }
+      @media (max-width: 1366px) {
+        padding: 20px 15px;
+      }
+      @media (max-width: 576px) {
+        flex-wrap: wrap;
+		padding: 15px 10px 5px 10px;
+      }
+      .nav-item {
+        margin: 0 10px 0 0;
+        @media (max-width: 576px) {
+          margin: 0 5px 10px 5px;
+          width: 48%;
+        }
+        @media (max-width: 479px) {
+          width: 100%;
+        }
+        .nav-link {
+          font-size: 14px;
+          font-weight: 600;
+          padding: 10px 20px;
+          position: relative;
+          background-color: $bgColor;
+          color: $primaryColor;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          border: none;
+          border-radius: 0;
+          @media (max-width: 576px) {
+            font-size: 12px;
+            padding: 9px 12px;
+          }
+          &:hover,
+          &:focus,
+          &.active {
+            background-color: $tabColor;
+            color: $white-color;
+          }
+        }
+      }
+    }
+  }
+  .tab-content {
+    .tab-pane {
+      .card {
+        border: none;
+        border-radius: 0;
+        margin: 0 0 25px 0;
+        height: calc(100% - 25px);
+        @media (max-width: 576px) {
+          margin: 0 0 15px 0;
+          height: calc(100% - 15px);
+        }
+        img {
+          height: 100%;
+          width: 100%;
+          max-width: 100%;
+          aspect-ratio: 9 / 13;
+          object-fit: cover;
+          object-position: center;
+          border-radius: 0;
+          overflow: hidden;
+          background-color: $iconColor;
+		  margin: -1px 0 0 0;
+        }
+        .card-body {
+          background-color: $primaryColor;
+          color: $white-color;
+          padding: 20px 15px;
+          display: flex;
+          flex-direction: column;
+          min-height: 130px;
+          @media (max-width: 576px) {
+            min-height: auto;
+          }
+          .card-title {
+            font-weight: 500;
+            line-height: 1.2;
+            font-size: 22px;
+            margin: 0 0 10px 0;
+            color: $white-color;
+            text-transform: uppercase;
+            @media (max-width: 1366px) {
+              font-size: 20px;
+            }
+            @media (max-width: 1024px) {
+              font-size: 18px;
+            }
+			@media (max-width: 576px) {
+				margin: 0 0 5px 0;
+			}
+          }
+          .card-text {
+            max-width: 90%;
+            @media (max-width: 1366px) {
+              max-width: 100%;
+            }
+            .designation {
+              font-size: 14px;
+              letter-spacing: 0.5px;
+              text-transform: uppercase;
+              color: $white-color;
+              font-weight: 600;
+              line-height: 1.2;
+            }
+            .degree {
+              color: $white-color;
+              font-size: 14px;
+              line-height: 1.42857143;
+              font-weight: normal;
+            }
+          }
+        }
+      }
+    }
+  }
+}

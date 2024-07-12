@@ -1,0 +1,32 @@
+.loaderSection {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: calc(100vh - 180px);
+  @media (max-width: 991px) {
+    height: calc(100vh - 100px);
+  }
+  @media (max-width: 767px) {
+    height: calc(100vh - 70px);
+  }
+  img {
+    max-width: 100%;
+    animation: zoom-in-zoom-out 2s ease-out infinite;
+    @media (max-width: 991px) {
+        width: 50px;
+        height: 50px;
+    }
+  }
+}
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.5, 1.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}

@@ -1,0 +1,125 @@
+.auth-section{
+    .common-paragraph{
+        font-size: 14px;
+        @media (max-width: 576px) {
+            font-size: 12px;
+        }
+    }
+    .title-part{
+        .sectionTitle{
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            @media (max-width: 576px) {
+                font-size: 20px;
+            }
+            &::before{
+                height: 2px;
+                width: 45px;
+            }
+            &.before-right-auto{
+                &::before{
+                    @media (max-width: 767px) {
+                        right: auto;
+                    }
+                }
+            }
+        }
+    }
+    .form-inner{
+        .form-title-part{
+            padding: 20px 20px 15px;
+            background: $whiteLightcolor;
+            border: 1px solid $authBorderColor;
+            @media (max-width: 576px) {
+                padding: 15px 15px;
+            }
+            .form-title{
+                font-size: 26px;
+                color: $black-color;
+                font-weight: 500;
+                margin: 0;
+                position: relative;
+                @media (max-width: 576px) {
+                    font-size: 20px;
+                }
+                .icon-bg{
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 100%;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    background: $lightBorder;
+                    border-radius: 100%;
+                    margin: 0 20px 0 0;
+                    @media (max-width: 576px) {
+                        width: 35px;
+                        height: 35px;
+                        margin: 0 10px 0 0;
+                    }
+
+                    .icon{
+                        color: $iconColor;
+                        font-size: 22px;
+                        @media (max-width: 576px) {
+                            font-size: 16px;
+                        }
+                    }
+                }
+                .form-sub-title{
+                    font-size: 18px;
+                    font-weight: 500;
+                }
+            }
+            
+        }
+        .form-part{
+            padding: 20px 20px 15px;
+            background: $white-color;
+            border: 1px solid $authBorderColor;
+            border-top: none;
+            @media (max-width: 576px) {
+                padding: 15px 15px;
+            }
+            .required-div{
+                .required{
+                    color: $danger-color;
+                    font-weight: normal;
+                    font-size: 12px;
+                }
+            }
+            .form-label,.form-check-label{
+                font-size: 14px;
+                color: $text-color;
+                font-weight: 600;
+                @media (max-width: 576px) {
+                    font-size: 12px;
+                }
+            }
+            .auth-btn-group{
+                .auth-lock-icon{
+                    .icon{
+                        font-size: 14px;
+                        color: $white-color;
+                    }
+                }
+            }
+            .form-inner-label{
+                font-weight: 600;
+                font-size: 15px;
+                color: $primaryColor;
+                @media (max-width: 576px) {
+                    font-size: 13px;
+                }
+                &:hover{
+                    color: $text-color;
+                }
+            }
+            .form-check-input:checked {
+                background-color: $primaryColor;
+                border-color: $primaryColor;
+            }
+        }
+    }
+}

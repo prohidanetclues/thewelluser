@@ -1,0 +1,16 @@
+.services{
+	.servicesBanner{
+        display: flex;
+    }
+    .servicePage{
+        background-color: #ffffff;
+    }
+    .servicePage .servicePageTitle{
+        text-transform: uppercase;
+        background-color: #EEEDEC;
+        color: #000000;
+        padding: 35px 0;
+        text-align: center;
+        font-size: 32px;
+    }
+}
